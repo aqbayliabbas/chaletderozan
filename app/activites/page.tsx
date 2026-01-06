@@ -37,7 +37,7 @@ const activities = [
 const ActivitesPage = () => {
     return (
         <main className="bg-paper min-h-screen selection:bg-rolex-green selection:text-paper">
-            <Navbar />
+            <Navbar isLightBackground />
 
             <section className="pt-48 pb-40">
                 <div className="container mx-auto px-8">

@@ -6,7 +6,7 @@ import Logo from "../ui/Logo";
 import { List, X } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Navbar = () => {
+const Navbar = ({ isLightBackground = false }: { isLightBackground?: boolean }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -25,6 +25,10 @@ const Navbar = () => {
         { name: "Chambre", href: "/chambre" },
     ];
 
+    // Determine if we should use dark elements (black logo/text)
+    // We use dark elements if we have a light background (subpages) OR if we have scrolled
+    const useDarkElements = isLightBackground || isScrolled;
+
     return (
         <>
             <nav
@@ -38,7 +42,7 @@ const Navbar = () => {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className={`font-serif italic text-lg transition-colors duration-700 ${isScrolled ? "text-ink/60 hover:text-rolex-green" : "text-paper/60 hover:text-paper"}`}
+                                className={`font-serif italic text-lg transition-colors duration-700 ${useDarkElements ? "text-ink/60 hover:text-rolex-green" : "text-paper/60 hover:text-paper"}`}
                             >
                                 {link.name}
                             </Link>
@@ -46,7 +50,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Centered Logo */}
-                    <Logo light={!isScrolled} />
+                    <Logo light={!useDarkElements} />
 
                     {/* Desktop Navigation Right */}
                     <div className="hidden lg:flex items-center gap-12 absolute right-8">
@@ -54,7 +58,7 @@ const Navbar = () => {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className={`font-serif italic text-lg transition-colors duration-700 ${isScrolled ? "text-ink/60 hover:text-rolex-green" : "text-paper/60 hover:text-paper"}`}
+                                className={`font-serif italic text-lg transition-colors duration-700 ${useDarkElements ? "text-ink/60 hover:text-rolex-green" : "text-paper/60 hover:text-paper"}`}
                             >
                                 {link.name}
                             </Link>
@@ -64,7 +68,7 @@ const Navbar = () => {
                     {/* Mobile Hamburger */}
                     <button
                         onClick={() => setIsMobileMenuOpen(true)}
-                        className={`lg:hidden p-2 transition-colors duration-700 ${isScrolled ? "text-ink" : "text-paper"}`}
+                        className={`lg:hidden p-2 transition-colors duration-700 ${useDarkElements ? "text-ink" : "text-paper"}`}
                     >
                         <List size={32} weight="thin" />
                     </button>

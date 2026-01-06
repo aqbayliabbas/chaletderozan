@@ -23,7 +23,7 @@ const features = [
 const StudioPage = () => {
     return (
         <main className="bg-paper min-h-screen selection:bg-rolex-green selection:text-paper">
-            <Navbar />
+            <Navbar isLightBackground />
 
             {/* High-End Header */}
             <section className="pt-48 pb-24">

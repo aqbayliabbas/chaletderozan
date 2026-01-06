@@ -18,7 +18,7 @@ const HistoirePage = () => {
 
     return (
         <main ref={containerRef} className="bg-paper min-h-screen selection:bg-rolex-green selection:text-paper overflow-x-hidden">
-            <Navbar />
+            <Navbar isLightBackground />
 
             {/* Hero Section - Vertical Title & Archive Image */}
             <section className="relative min-h-screen pt-40 pb-20 overflow-hidden">

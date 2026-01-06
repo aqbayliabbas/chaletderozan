@@ -30,7 +30,7 @@ const Hero = () => {
         <section className="relative h-screen min-h-[850px] bg-paper flex flex-col items-center justify-center overflow-hidden">
             {/* Gallery Left */}
             <motion.div
-                className="absolute left-0 top-0 bottom-0 w-[20%] z-10 pointer-events-none hidden lg:flex flex-col justify-center gap-12 pl-12"
+                className="absolute left-0 top-0 bottom-0 w-[20%] z-10 pointer-events-none hidden xl:flex flex-col justify-center gap-12 pl-12"
                 style={{
                     WebkitMaskImage: 'linear-gradient(to right, white 60%, transparent)',
                     maskImage: 'linear-gradient(to right, white 60%, transparent)',
@@ -63,7 +63,7 @@ const Hero = () => {
 
             {/* Gallery Right */}
             <motion.div
-                className="absolute right-0 top-0 bottom-0 w-[20%] z-10 pointer-events-none hidden lg:flex flex-col justify-center gap-12 pr-12"
+                className="absolute right-0 top-0 bottom-0 w-[20%] z-10 pointer-events-none hidden xl:flex flex-col justify-center gap-12 pr-12"
                 style={{
                     WebkitMaskImage: 'linear-gradient(to left, white 60%, transparent)',
                     maskImage: 'linear-gradient(to left, white 60%, transparent)',

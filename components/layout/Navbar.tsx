@@ -42,7 +42,7 @@ const Navbar = ({ isLightBackground = false }: { isLightBackground?: boolean }) 
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className={`font-serif italic text-lg transition-colors duration-700 ${useDarkElements ? "text-ink/60 hover:text-rolex-green" : "text-paper/60 hover:text-paper"}`}
+                                className={`font-serif italic text-xl font-bold transition-all duration-700 drop-shadow-sm ${useDarkElements ? "text-ink hover:text-rolex-green" : "text-paper hover:text-rolex-gold"}`}
                             >
                                 {link.name}
                             </Link>
@@ -58,7 +58,7 @@ const Navbar = ({ isLightBackground = false }: { isLightBackground?: boolean }) 
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className={`font-serif italic text-lg transition-colors duration-700 ${useDarkElements ? "text-ink/60 hover:text-rolex-green" : "text-paper/60 hover:text-paper"}`}
+                                className={`font-serif italic text-xl font-bold transition-all duration-700 drop-shadow-sm ${useDarkElements ? "text-ink hover:text-rolex-green" : "text-paper hover:text-rolex-gold"}`}
                             >
                                 {link.name}
                             </Link>
